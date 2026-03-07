@@ -2,6 +2,11 @@ public class NotificationManager {
 
     public void send(String type, String message, String recipient) {
 
+        if (type == null || message == null || recipient == null) {
+            System.out.println("Error: parámetros inválidos");
+            return;
+        }
+
         System.out.println("LOG: intentando enviar notificación");
 
         NotificationService service = null;
