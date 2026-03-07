@@ -2,6 +2,8 @@ public class NotificationManager {
 
     public void send(String type, String message, String recipient) {
 
+        System.out.println("LOG: intentando enviar notificación");
+
         NotificationService service = null;
 
         if (type.equals("email")) {
@@ -15,7 +17,7 @@ public class NotificationManager {
         if (service != null) {
             service.send(message, recipient);
         } else {
-            System.out.println("Tipo de notificación no soportado");
+            System.out.println("LOG: tipo de notificación no soportado");
         }
     }
 }
