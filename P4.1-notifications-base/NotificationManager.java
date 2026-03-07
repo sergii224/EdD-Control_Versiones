@@ -22,5 +22,5 @@ public class NotificationManager {
     
     // TODO: Añadir método para enviar a múltiples destinatarios
     // TODO: Añadir sistema de reintentos
-    // TODO: Añadir validación de parámetros
+    // TODO: Añadir validación de parámetros 
 }
