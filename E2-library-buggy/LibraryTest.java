@@ -14,4 +14,14 @@ public class LibraryTest {
 
         System.out.println("Libros en biblioteca: " + lib.findAvailableBooks().size());
     }
+
+    @Test
+    public void testBusqueda() {
+
+    Library lib = new Library();
+
+    lib.addBook(new Book("Java", "Autor", "111"));
+
+    System.out.println("Resultado búsqueda: " + lib.findBookByTitle("java"));
+}
 }
