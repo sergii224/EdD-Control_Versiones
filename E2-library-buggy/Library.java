@@ -37,5 +37,8 @@ public class Library {
         return availableBooks;
     }
     
-    // BUG 8: Falta método para quitar libros
+    public void removeBook(String isbn){
+        books.removeIf(b -> b.getIsbn().equals(isbn));
+    }
 }
+
