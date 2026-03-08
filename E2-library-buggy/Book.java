@@ -19,12 +19,20 @@ public class Book {
     public boolean isAvailable() { return available; }
 
     public void borrow() {
-        // BUG 2: No valida si ya está prestado
-        available = false;
+        
+        if (available) {
+            available = false;
+        } else {
+            System.out.println("Error: Ya está prestado.");
+        }
     }
     
     public void returnBook() {
-        // BUG 3: No valida si ya estaba disponible
-        available = true;
+
+        if (!available) {
+            available = true;
+        } else {
+            System.out.println("Error: No estaba prestado");
+        }
     }
 }

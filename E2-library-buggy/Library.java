@@ -30,7 +30,7 @@ public class Library {
         List<Book> availableBooks = new ArrayList<>();
         // BUG 6: ConcurrentModificationException potencial
         for (Book book : books) {
-            if (true) { // BUG 7: Siempre true, no verifica disponibilidad real
+            if (book.isAvailable()) {
                 availableBooks.add(book);
             }
         }
