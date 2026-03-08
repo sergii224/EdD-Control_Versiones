@@ -3,15 +3,17 @@ import java.util.*;
 
 public class Library {
     private List<Book> books = new ArrayList<>();
+    private boolean isIsbnUnique(String isbn) {
+        for (Book b : books) {
+            if (b.getIsbn().equals(isbn)) return false;
+        }
+        return true;
+    }
 
     public void addBook(Book book) {
-        for (Book b : books) {
-            if (b.getIsbn().equals(book.getIsbn())) {
-                System.out.println("El libro con ISBN " + book.getIsbn() + " ya existe.");
-                return;
-            }
-        }
+       if (isIsbnUnique(book.getIsbn())){
         books.add(book);
+       }
     }    
 
     public Book findBookByTitle(String title) {
